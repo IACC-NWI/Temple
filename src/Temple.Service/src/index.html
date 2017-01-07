@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<html>
+<head>
+    <title>Indian American Cultural Center - North West Indiana</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- build:css assets/bundle.css -->
+    <link rel="stylesheet" type="text/css" href="../node_modules/quill/dist/quill.core.css" />
+    <link rel="stylesheet" type="text/css" href="../node_modules/quill/dist/quill.snow.css" />
+    <link rel="stylesheet" type="text/css" href="../node_modules/primeng/resources/primeng.css" />
+
+    <link rel="stylesheet" href="/assets/styles/main.css">
+
+    <link href="assets/styles/animate.css" rel="stylesheet" />
+    <!--<link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.css">-->
+    <!-- endbuild -->
+
+</head>
+<body>
+    <iacc-main-app>
+        <div class="splash-screen">
+            <div class="splash-container">
+                <div class="logo"></div>
+
+                <div class="load-bar">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <h4 style="color: white">INTERNAL UIT PORTAL</h4>
+            </div>
+        </div>
+    </iacc-main-app>
+    <!--<script type="text/javascript" src="evnSettings/authsettings.js"></script>-->
+    <!-- build:js assets/lib.js -->
+    <!-- Non-module JS libs -->
+
+    <script src="../node_modules/quill/dist/quill.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="assets/script/layout.js"></script>
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="../node_modules/core-js/client/shim.min.js"></script>
+    <!-- Load libraries -->
+    <script src="../node_modules/zone.js/dist/zone.js"></script>
+    <script src="assets/script/jquery.deps.js"></script>
+    <script src="assets/script/nanoscroller.js"></script>
+    <script src="assets/script/ripple.js"></script>
+    <script src="assets/script/swipe.js"></script>
+    <!-- endbuild -->
+    <!-- build:js assets/app.js -->
+    <script src="tmp/app/bundle.js"></script>
+    <!-- endbuild -->
+    <!-- build:remove -->
+    <script src="../node_modules/systemjs/dist/system.js"></script>
+
+    <script src="systemjs.conf.js"></script>
+    <script>
+        System.import('app/main.js')
+          .catch(function (err) { console.error(err); });
+    </script>
+    <!-- endbuild -->
+</body>
+</html>

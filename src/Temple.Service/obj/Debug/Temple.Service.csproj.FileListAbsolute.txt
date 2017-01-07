@@ -1,0 +1,1 @@
+C:\Projects\IACC-NWI\Temple\src\Temple.Service\bin\Debug\Temple.Service.exe.config

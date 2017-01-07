@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EEF87598-F03C-44EB-81E3-57D025D83F12}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Temple.Service</RootNamespace>
+    <AssemblyName>Temple.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="package.json" />
+    <None Include="src\assets\fonts\MaterialIcons-Regular.eot" />
+    <None Include="src\assets\fonts\MaterialIcons-Regular.ttf" />
+    <None Include="src\assets\fonts\MaterialIcons-Regular.woff" />
+    <None Include="src\assets\fonts\MaterialIcons-Regular.woff2" />
+    <None Include="src\assets\fonts\roboto-v15-latin-300.eot" />
+    <None Include="src\assets\fonts\roboto-v15-latin-300.ttf" />
+    <None Include="src\assets\fonts\roboto-v15-latin-300.woff" />
+    <None Include="src\assets\fonts\roboto-v15-latin-300.woff2" />
+    <None Include="src\assets\fonts\roboto-v15-latin-700.eot" />
+    <None Include="src\assets\fonts\roboto-v15-latin-700.ttf" />
+    <None Include="src\assets\fonts\roboto-v15-latin-700.woff" />
+    <None Include="src\assets\fonts\roboto-v15-latin-700.woff2" />
+    <None Include="src\assets\fonts\roboto-v15-latin-regular.eot" />
+    <None Include="src\assets\fonts\roboto-v15-latin-regular.ttf" />
+    <None Include="src\assets\fonts\roboto-v15-latin-regular.woff" />
+    <None Include="src\assets\fonts\roboto-v15-latin-regular.woff2" />
+    <None Include="src\assets\styles\layout-grey.scss" />
+    <None Include="src\assets\styles\saas\layout\_compact.scss" />
+    <None Include="src\assets\styles\saas\layout\_dashboard.scss" />
+    <None Include="src\assets\styles\saas\layout\_exception.scss" />
+    <None Include="src\assets\styles\saas\layout\_landing.scss" />
+    <None Include="src\assets\styles\saas\layout\_layout.scss" />
+    <None Include="src\assets\styles\saas\layout\_login.scss" />
+    <None Include="src\assets\styles\saas\layout\_main.scss" />
+    <None Include="src\assets\styles\saas\layout\_splash.scss" />
+    <None Include="src\assets\styles\saas\layout\_utils.scss" />
+    <None Include="src\assets\styles\saas\theme\_editor.scss" />
+    <None Include="src\assets\styles\saas\theme\_icons.scss" />
+    <None Include="src\assets\styles\saas\theme\_theme.scss" />
+    <None Include="src\assets\styles\saas\_fonts.scss" />
+    <None Include="src\assets\styles\saas\_mixins.scss" />
+    <None Include="src\assets\styles\saas\_variables.scss" />
+    <None Include="src\assets\styles\theme-grey.scss" />
+    <None Include="tsconfig.json" />
+    <None Include="tslint.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\gulp\config.js" />
+    <Content Include="config\gulp\env.js" />
+    <Content Include="config\gulp\local-config.js" />
+    <Content Include="config\gulp\tasks\build.js" />
+    <Content Include="config\gulp\tasks\clean.js" />
+    <Content Include="config\gulp\tasks\sass.js" />
+    <Content Include="config\gulp\tasks\serve.js" />
+    <Content Include="config\gulp\tasks\typescript.js" />
+    <Content Include="gulpfile.js" />
+    <Content Include="src\assets\fonts\roboto-v15-latin-300.svg" />
+    <Content Include="src\assets\fonts\roboto-v15-latin-700.svg" />
+    <Content Include="src\assets\fonts\roboto-v15-latin-regular.svg" />
+    <Content Include="src\assets\scripts\jquery.deps.js" />
+    <Content Include="src\assets\scripts\layout.js" />
+    <Content Include="src\assets\scripts\nanoscroller.js" />
+    <Content Include="src\assets\scripts\ripple.js" />
+    <Content Include="src\assets\scripts\swipe.js" />
+    <Content Include="src\index.html" />
+    <Content Include="src\systemjs.config.js" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
