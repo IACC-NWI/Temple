@@ -1,0 +1,6 @@
+﻿<div class="center">
+    <div class="ui-g">
+        <input pInputText type="tel" [(ngModel)]="memberId" placeholder="Member Number" />
+        <button type="submit" pButton [routerLink]="['/member/', memberId]" label="Look-up"></button>
+    </div>
+</div>
