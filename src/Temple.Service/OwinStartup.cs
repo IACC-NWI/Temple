@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.Owin;
+using Microsoft.Owin.Cors;
 using Newtonsoft.Json;
 using Owin;
 using WindsorWebApiDependency;
@@ -18,6 +19,8 @@ namespace Temple.Service
     {
         public void Configuration(IAppBuilder app)
         {
+            app.UseCors(CorsOptions.AllowAll);
+
             var config = new HttpConfiguration();
             config.Formatters.Clear();
             config.Formatters.Add(new JsonMediaTypeFormatter());
@@ -25,7 +28,7 @@ namespace Temple.Service
             config.MapHttpAttributeRoutes();
             config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
             app.UseWebApi(config);
-
+            
             app.Use(async (context, next) =>
             {
                 if (!context.Request.Path.Value.Contains(".")

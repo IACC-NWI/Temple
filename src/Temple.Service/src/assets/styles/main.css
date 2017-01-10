@@ -8867,3 +8867,13 @@ body .layout-wrapper.layout-compact {
     padding: 14px 16px; }
     body .layout-wrapper.layout-compact .layout-container .topbar .topbar-right .topbar-items > li > a i {
       font-size: 20px; } }
+
+.center {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }

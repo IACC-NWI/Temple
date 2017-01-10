@@ -10,8 +10,4 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
     memberId: string;
-
-    findMember() {
-        alert(this.memberId);
-    }
 }

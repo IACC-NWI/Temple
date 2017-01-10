@@ -12,9 +12,6 @@ var core_1 = require('@angular/core');
 var HomeComponent = (function () {
     function HomeComponent() {
     }
-    HomeComponent.prototype.findMember = function () {
-        alert(this.memberId);
-    };
     HomeComponent = __decorate([
         core_1.Component({
             selector: 'iacc-home',

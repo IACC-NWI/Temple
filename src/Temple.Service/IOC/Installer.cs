@@ -7,6 +7,7 @@ using System.Web.Http;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
+using Temple.Service.Database;
 
 namespace Temple.Service.IOC
 {
@@ -14,7 +15,9 @@ namespace Temple.Service.IOC
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(Classes.FromThisAssembly().BasedOn<ApiController>().LifestyleTransient());
+            container.Register(
+                Component.For<ITempleDatabaseContext>().ImplementedBy<TempleDatabaseContext>(),
+                Classes.FromThisAssembly().BasedOn<ApiController>().LifestyleTransient());
         }
     }
 }

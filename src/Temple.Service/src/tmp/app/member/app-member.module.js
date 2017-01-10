@@ -14,6 +14,7 @@ var forms_1 = require('@angular/forms');
 var primeng_1 = require('primeng/primeng');
 var app_member_routes_1 = require('./app-member.routes');
 var member_component_1 = require('./member.component');
+var member_service_1 = require('./member.service');
 var AppMemberModule = (function () {
     function AppMemberModule() {
     }
@@ -25,7 +26,10 @@ var AppMemberModule = (function () {
                 forms_1.ReactiveFormsModule,
                 primeng_1.ButtonModule,
                 router_1.RouterModule.forChild(app_member_routes_1.AppMemberRoutes)],
-            declarations: [member_component_1.MemberComponent]
+            declarations: [member_component_1.MemberComponent],
+            providers: [
+                member_service_1.MemberService
+            ],
         }), 
         __metadata('design:paramtypes', [])
     ], AppMemberModule);
