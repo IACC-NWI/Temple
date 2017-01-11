@@ -1,0 +1,27 @@
+2017-01-10 21:04:06,571 [9] INFO  Topshelf.HostFactory - Configuration Result:
+[Success] Name Temple.Service
+[Success] DisplayName Temple Service
+[Success] Description Temple Service
+[Success] ServiceName Temple.Service
+2017-01-10 21:04:06,646 [9] INFO  Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-01-10 21:04:10,550 [9] DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2017-01-10 21:04:10,705 [9] DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2017-01-10 21:04:21,693 [9] INFO  Topshelf.Hosts.ConsoleRunHost - The Temple.Service service is now running, press Control+C to exit.
+2017-01-10 21:06:43,989 [10] INFO  Topshelf.HostFactory - Configuration Result:
+[Success] Name Temple.Service
+[Success] DisplayName Temple Service
+[Success] Description Temple Service
+[Success] ServiceName Temple.Service
+2017-01-10 21:06:44,039 [10] INFO  Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-01-10 21:06:45,586 [10] DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2017-01-10 21:06:45,599 [10] DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2017-01-10 21:06:47,241 [10] INFO  Topshelf.Hosts.ConsoleRunHost - The Temple.Service service is now running, press Control+C to exit.
+2017-01-10 21:38:09,226 [9] INFO  Topshelf.HostFactory - Configuration Result:
+[Success] Name Temple.Service
+[Success] DisplayName Temple Service
+[Success] Description Temple Service
+[Success] ServiceName Temple.Service
+2017-01-10 21:38:09,458 [9] INFO  Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-01-10 21:38:10,876 [9] DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2017-01-10 21:38:10,894 [9] DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2017-01-10 21:38:12,786 [9] INFO  Topshelf.Hosts.ConsoleRunHost - The Temple.Service service is now running, press Control+C to exit.

@@ -28,4 +28,9 @@ export class MemberService {
             .map((res: Response) => res.json())
             .catch((error: any) => Observable.throw(error.json().error || 'server error'));
     }
+    addMember(member: Member) {
+        return this.http.post(this.templeService + 'api/temple/addMember', member)
+            .map((res: Response) => res.json())
+            .catch((error: any) => Observable.throw(error.json().error || 'server error'));
+    }
 }

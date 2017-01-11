@@ -151,7 +151,12 @@
     <Compile Include="Migrations\201701100315569_InitialCreate1.Designer.cs">
       <DependentUpon>201701100315569_InitialCreate1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701110326063_two.cs" />
+    <Compile Include="Migrations\201701110326063_two.Designer.cs">
+      <DependentUpon>201701110326063_two.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\MemberModel.cs" />
     <Compile Include="OwinStartup.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -248,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701100315569_InitialCreate1.resx">
       <DependentUpon>201701100315569_InitialCreate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701110326063_two.resx">
+      <DependentUpon>201701110326063_two.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

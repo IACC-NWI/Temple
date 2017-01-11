@@ -2,31 +2,31 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Temple.Service.Database.Models
+namespace Temple.Service.Models
 {
-    public class Member
+    public class MemberModel
     {
-        [MaxLength(10), Key]
+        [Required, MaxLength(10)]
         public string MemberId { get; set; }
-        [MaxLength(50)]
+        [Required, MaxLength(50)]
         public string FirstName { get; set; }
-        [MaxLength(50)]
+        [Required, MaxLength(50)]
         public string LastName { get; set; }
-        [MaxLength(50)]
+        [Required, MaxLength(50)]
         public string AddressLine1 { get; set; }
         [MaxLength(50)]
         public string AddressLine2 { get; set; }
-        [MaxLength(20)]
+        [Required, MaxLength(20)]
         public string City { get; set; }
-        [MaxLength(2)]
+        [Required, MaxLength(2)]
         public string State { get; set; }
-        [MaxLength(5)]
+        [Required, MaxLength(5)]
         public string Zip { get; set; }
-
         public int FamilySize { get; set; }
+
+        public bool MemberNotFound { get; set; }
     }
 }

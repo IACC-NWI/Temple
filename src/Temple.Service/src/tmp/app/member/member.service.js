@@ -29,6 +29,11 @@ var MemberService = (function () {
             .map(function (res) { return res.json(); })
             .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'server error'); });
     };
+    MemberService.prototype.addMember = function (member) {
+        return this.http.post(this.templeService + 'api/temple/addMember', member)
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'server error'); });
+    };
     MemberService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])

@@ -8,4 +8,5 @@
     State: string;
     Zip: string;
     FamilySize: number;
+    MemberNotFound: boolean;
 }
