@@ -187,7 +187,7 @@
     <None Include="src\assets\fonts\roboto-v15-latin-regular.ttf" />
     <None Include="src\assets\fonts\roboto-v15-latin-regular.woff" />
     <None Include="src\assets\fonts\roboto-v15-latin-regular.woff2" />
-    <None Include="src\assets\styles\layout-grey.scss" />
+    <None Include="src\assets\styles\layout.scss" />
     <None Include="src\assets\styles\main.scss" />
     <None Include="src\assets\styles\sass\layout\_compact.scss" />
     <None Include="src\assets\styles\sass\layout\_dashboard.scss" />
@@ -204,7 +204,7 @@
     <None Include="src\assets\styles\sass\_fonts.scss" />
     <None Include="src\assets\styles\sass\_mixins.scss" />
     <None Include="src\assets\styles\sass\_variables.scss" />
-    <None Include="src\assets\styles\theme-grey.scss" />
+    <None Include="src\assets\styles\theme.scss" />
     <None Include="tsconfig.json" />
     <None Include="tslint.json" />
     <TypeScriptCompile Include="src\app\member\app-member.module.ts" />
@@ -229,6 +229,9 @@
     <Content Include="src\assets\fonts\roboto-v15-latin-300.svg" />
     <Content Include="src\assets\fonts\roboto-v15-latin-700.svg" />
     <Content Include="src\assets\fonts\roboto-v15-latin-regular.svg" />
+    <Content Include="src\assets\images\iacc-nwi-logo-blue.png" />
+    <Content Include="src\assets\images\iacc-nwi-logo-white.png" />
+    <Content Include="src\assets\images\iacc-nwi-logo.png" />
     <Content Include="src\assets\script\jquery.deps.js" />
     <Content Include="src\assets\script\layout.js" />
     <Content Include="src\assets\script\nanoscroller.js" />

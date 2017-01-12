@@ -17,7 +17,7 @@ require('rxjs/add/operator/catch');
 var MemberService = (function () {
     function MemberService(http) {
         this.http = http;
-        this.templeService = "http://localhost:30010/";
+        this.templeService = 'http://localhost:30010/';
     }
     MemberService.prototype.getMember = function (memberId) {
         return this.http.get(this.templeService + 'api/temple/getMember/' + memberId)

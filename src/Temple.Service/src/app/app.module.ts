@@ -31,5 +31,5 @@ const routing = RouterModule.forRoot(AppRoutes);
     providers: []
 })
 export class AppModule {
-    
+
 }

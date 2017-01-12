@@ -2,5 +2,5 @@
 import { MemberComponent } from './member.component';
 
 export const AppMemberRoutes: Routes = [
-	{ path: 'member/:memberId', component: MemberComponent }
-]
+    { path: 'member/:memberId', component: MemberComponent }
+];

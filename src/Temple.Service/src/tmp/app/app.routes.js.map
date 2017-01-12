@@ -1,1 +1,1 @@
-{"version":3,"sources":["app/app.routes.ts"],"names":[],"mappings":";AAEa,iBAAS,GAAW,EAAE,CAAC","file":"app.routes.js","sourcesContent":["import { Routes } from '@angular/router';\r\n\r\nexport const AppRoutes: Routes = [];"]}
+{"version":3,"sources":["app/app.routes.ts"],"names":[],"mappings":";AAEa,iBAAS,GAAW,EAAE,CAAC","file":"app.routes.js","sourcesContent":["import { Routes } from '@angular/router';\r\n\r\nexport const AppRoutes: Routes = [];\r\n"]}

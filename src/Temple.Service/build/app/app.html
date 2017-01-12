@@ -1,3 +1,21 @@
-<div class="layout-main">
-    <router-outlet></router-outlet>
+<div [ngClass]="{'layout-wrapper':true,'layout-compact':layoutCompact}">
+
+    <div [ngClass]="{'layout-container':true,'menu-layout-static':(layoutMode=='static'||layoutMode=='horizontal'),
+            'menu-layout-overlay':(layoutMode=='overlay'),'menu-layout-horizontal':true}">
+        <div class="topbar clearfix">
+            <div class="topbar-left">
+                <div class="logo"></div>
+            </div>
+        </div>
+
+        <div class="layout-main">
+            <router-outlet></router-outlet>
+            <div class="footer">
+                <div class="card clearfix">
+                    <span class="footer-text-left">Indian American Cultural Center - Northwest Indiana</span>
+                    <span class="footer-text-right"><span class="ui-icon ui-icon-copyright"></span>  <span>All Rights Reserved</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,5 +1,5 @@
 ﻿import { Injectable } from '@angular/core';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
 // Import RxJs required methods
@@ -11,15 +11,13 @@ import { Member } from './member.model';
 
 @Injectable()
 export class MemberService {
-    constructor(private http: Http) { }
+    private templeService = 'http://localhost:30010/';
 
-    private templeService = "http://localhost:30010/";
+    constructor(private http: Http) { }
 
     getMember(memberId: string) {
         return this.http.get(this.templeService + 'api/temple/getMember/' + memberId)
-            // ...and calling .json() on the response to return data
             .map((res: Response) => res.json())
-            //...errors if any
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 

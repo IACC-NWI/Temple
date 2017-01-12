@@ -1,0 +1,8 @@
+<div class="card card-w-title">
+    <h1>Lookup Member Info</h1>
+    <div class="ui-g">
+
+        <input pInputText type="tel" [(ngModel)]="memberId" placeholder="Member Number"/>
+        <button type="submit" pButton [routerLink]="['/member/', memberId]" label="Look-up"></button>
+    </div>
+</div>
