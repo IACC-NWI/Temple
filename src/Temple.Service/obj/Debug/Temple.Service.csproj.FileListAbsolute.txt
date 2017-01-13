@@ -50,3 +50,4 @@ C:\Projects\IACC-NWI\Temple\src\Temple.Service\bin\Debug\System.Web.Cors.dll
 C:\Projects\IACC-NWI\Temple\src\Temple.Service\bin\Debug\Microsoft.Owin.Cors.xml
 C:\Projects\IACC-NWI\Temple\src\Temple.Service\obj\Debug\Temple.Service.Migrations.InitialCreate1.resources
 C:\Projects\IACC-NWI\Temple\src\Temple.Service\obj\Debug\Temple.Service.Migrations.two.resources
+C:\Projects\IACC-NWI\Temple\src\Temple.Service\obj\Debug\Temple.Service.Migrations.ReceiptGeneration.resources

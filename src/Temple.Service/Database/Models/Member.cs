@@ -26,6 +26,8 @@ namespace Temple.Service.Database.Models
         public string State { get; set; }
         [MaxLength(5)]
         public string Zip { get; set; }
+        [MaxLength(50)]
+        public string Email { get; set; }
 
         public int FamilySize { get; set; }
     }

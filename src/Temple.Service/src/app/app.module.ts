@@ -9,7 +9,7 @@ import { AppRoutes } from './app.routes';
 import { AppComponent } from './app.component';
 import { AppHomeModule } from './home/app-home.module';
 import { AppMemberModule } from './member/app-member.module';
-
+import { AppOfferedServicesModule } from './offeredservices/app-offered-services.module';
 const routing = RouterModule.forRoot(AppRoutes);
 
 @NgModule({
@@ -22,7 +22,8 @@ const routing = RouterModule.forRoot(AppRoutes);
         ReactiveFormsModule,
 
         AppHomeModule,
-        AppMemberModule
+        AppMemberModule,
+        AppOfferedServicesModule
     ],
     declarations: [
         AppComponent

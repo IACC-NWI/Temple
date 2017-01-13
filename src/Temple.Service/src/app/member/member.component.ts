@@ -20,7 +20,7 @@ export class MemberComponent implements OnInit {
     }
 
     ngOnInit() {
-
+        this.memberNotFound = true;
         this.route.params.subscribe(params => {
             this.memberId = params['memberId'];
             this.memberForm = this.formBuilder.group({
@@ -28,7 +28,7 @@ export class MemberComponent implements OnInit {
                 FirstName: ['', [<any>Validators.required]],
                 LastName: ['', [<any>Validators.required]],
                 AddressLine1: ['', [<any>Validators.required]],
-                AddressLine2: ['', [<any>Validators.required]],
+                AddressLine2: [''],
                 City: ['', [<any>Validators.required]],
                 State: ['', [<any>Validators.required]],
                 Zip: ['', [<any>Validators.required]],

@@ -1,79 +1,104 @@
-﻿<div class="card card-w-title">
-    <h1>Validate Member Info</h1>
-    <div class="ui-g ui-fluid">
-        <form [formGroup]="memberForm" novalidate (ngSubmit)="save(memberForm.value, memberForm.valid)">
+﻿<div class="ui-g ui-fluid">
+    <div class="ui-lg-4 ui-g-1 ui-md-3"></div>
+    <div class="ui-lg-4 ui-md-6 ui-g-10">
+        <div class="card card-w-title">
+            
+            <h1 [hidden]="!memberNotFound">Add New Member </h1>
+            <h1 [hidden]="memberNotFound">Validate Member Info</h1>
             <div class="ui-g form-group">
-                <div class="ui-lg-12 ui-md-12 ui-g-12">
-                    <label>Member Id</label>
-                    <input type="text" formControlName="MemberId" pInputText>
-                    <small [hidden]="memberForm.controls.MemberId.valid || (!submitted)">
-                        Member Id is required (Typically your phone number including Area Code.).
-                    </small>
-                </div>
-
-            </div>
-            <div class="ui-g">
-                <div class="ui-lg-6 ui-md-6 ui-g-12">
-                    <label>First Name</label>
-                    <input type="text" formControlName="FirstName" pInputText>
-                    <small [hidden]="memberForm.controls.FirstName.valid || (!submitted)">
-                        First Name is required.
-                    </small>
-                </div>
-                <div class="ui-lg-6 ui-md-6 ui-g-12">
-                    <label>Last Name</label>
-                    <input type="text" formControlName="LastName" pInputText>
-                    <small [hidden]="memberForm.controls.LastName.valid || (!submitted)">
-                        Last Name is required.
-                    </small>
-                </div>
-
-            </div>
-            <div class="ui-g">
                 <div class="ui-g-12">
-                    <label>Address Line 1</label>
-                    <input type="text" formControlName="AddressLine1" pInputText>
-                    <small [hidden]="memberForm.controls.AddressLine1.valid || (!submitted)">
-                        Address Line 1 is required.
-                    </small>
+                    <form [formGroup]="memberForm" novalidate>
+                        <div class="ui-g">
+                            <div class="ui-lg-6 ui-md-6 ui-g-12">
+                                <label>Member Id</label>
+                                <input type="text" formControlName="MemberId" pInputText>
+                                <small [hidden]="memberForm.controls.MemberId.valid || (!submitted)">
+                                    Member Id is required (Typically your phone number including Area Code.).
+                                </small>
+                            </div>
+                            <div class="ui-lg-6 ui-md-6 ui-g-12">
+                                <label>Family Members</label>
+                                <input type="number" formControlName="FamilySize" pInputText>
+                                <small [hidden]="memberForm.controls.FamilySize.valid || (!submitted)">
+                                    Number of family members
+                                </small>
+                            </div>
+                        </div>
+                        <div class="ui-g">
+                            <div class="ui-lg-6 ui-md-6 ui-g-12">
+                                <label>First Name</label>
+                                <input type="text" formControlName="FirstName" pInputText>
+                                <small [hidden]="memberForm.controls.FirstName.valid || (!submitted)">
+                                    First Name is required.
+                                </small>
+                            </div>
+                            <div class="ui-lg-6 ui-md-6 ui-g-12">
+                                <label>Last Name</label>
+                                <input type="text" formControlName="LastName" pInputText>
+                                <small [hidden]="memberForm.controls.LastName.valid || (!submitted)">
+                                    Last Name is required.
+                                </small>
+                            </div>
+
+                        </div>
+                        <div class="ui-g">
+                            <div class="ui-g-12">
+                                <label>Address Line 1</label>
+                                <input type="text" formControlName="AddressLine1" pInputText>
+                                <small [hidden]="memberForm.controls.AddressLine1.valid || (!submitted)">
+                                    Address Line 1 is required.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="ui-g">
+                            <div class="ui-g-12">
+                                <label>Address Line 2</label>
+                                <input type="text" formControlName="AddressLine2" pInputText>
+                                <small [hidden]="memberForm.controls.AddressLine2.valid || (!submitted)">
+                                    Address Line 1 is required.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="ui-g">
+                            <div class="ui-lg-4 ui-md-4 ui-g-12">
+                                <label>City</label>
+                                <input type="text" formControlName="City" pInputText>
+                                <small [hidden]="memberForm.controls.City.valid || (!submitted)">
+                                    City is required.
+                                </small>
+                            </div>
+                            <div class="ui-lg-4 ui-md-4 ui-g-12">
+                                <label>State</label>
+                                <input type="text" formControlName="State" pInputText>
+                                <small [hidden]="memberForm.controls.State.valid || (!submitted)">
+                                    State is required.
+                                </small>
+                            </div>
+                            <div class="ui-lg-4 ui-md-4 ui-g-12">
+                                <label>State</label>
+                                <input type="text" formControlName="Zip" pInputText>
+                                <small [hidden]="memberForm.controls.Zip.valid || (!submitted)">
+                                    Zip is required.
+                                </small>
+                            </div>
+
+                        </div>
+                        <div class="ui-g">
+                            <div class="ui-lg-6 ui-md-6 ui-g-12">
+                                
+                                <button type="submit" pButton label="Submit" [disabled]="!memberForm.valid" (click)="save(memberForm.value, memberForm.valid)"></button>
+                            </div>
+                            <div class="ui-lg-6 ui-md-6 ui-g-12" [hidden]="memberNotFound">
+                                <button [disabled]="!memberForm.valid" pButton label="Choose Service" [routerLink]="['/servicesformembers/', memberId]"></button>
+                            </div>
+                        </div>
+
+
+                    </form>
                 </div>
             </div>
-            <div class="ui-g">
-                <div class="ui-g-12">
-                    <label>Address Line 2</label>
-                    <input type="text" formControlName="AddressLine2" pInputText>
-                    <small [hidden]="memberForm.controls.AddressLine2.valid || (!submitted)">
-                        Address Line 1 is required.
-                    </small>
-                </div>
-            </div>
-            <div class="ui-g">
-                <div class="ui-lg-4 ui-md-4 ui-g-12">
-                    <label>City</label>
-                    <input type="text" formControlName="City" pInputText>
-                    <small [hidden]="memberForm.controls.City.valid || (!submitted)">
-                        City is required.
-                    </small>
-                </div>
-                <div class="ui-lg-4 ui-md-4 ui-g-12">
-                    <label>State</label>
-                    <input type="text" formControlName="State" pInputText>
-                    <small [hidden]="memberForm.controls.State.valid || (!submitted)">
-                        State is required.
-                    </small>
-                </div>
-                <div class="ui-lg-4 ui-md-4 ui-g-12">
-                    <label>State</label>
-                    <input type="text" formControlName="Zip" pInputText>
-                    <small [hidden]="memberForm.controls.Zip.valid || (!submitted)">
-                        Zip is required.
-                    </small>
-                </div>
-
-            </div>
-            <button type="submit" pButton label="Submit"></button>
-
-
-        </form>
+        </div>
     </div>
+    <div class="ui-lg-4 ui-g-1 ui-md-3"></div>
 </div>
+

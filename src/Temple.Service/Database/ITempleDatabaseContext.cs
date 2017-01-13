@@ -11,6 +11,9 @@ namespace Temple.Service.Database
     public interface ITempleDatabaseContext
     {
         DbSet<Member> Members { get; set; }
+        DbSet<Festival> Festival { get; set; }
+        DbSet<Database.Models.Service> Services { get; set; }
+        DbSet<PerformedService> PerformedServices { get; set; }
         Task<int> SaveChangesAsync();
     }
 }

@@ -140,7 +140,10 @@
   <ItemGroup>
     <Compile Include="Controllers\TempleController.cs" />
     <Compile Include="Database\ITempleDatabaseContext.cs" />
+    <Compile Include="Database\Models\Festival.cs" />
     <Compile Include="Database\Models\Member.cs" />
+    <Compile Include="Database\Models\PerformedService.cs" />
+    <Compile Include="Database\Models\Service.cs" />
     <Compile Include="Database\TempleDatabaseContext.cs" />
     <Compile Include="IOC\Installer.cs" />
     <Compile Include="Migrations\201701100240442_InitialCreate.cs" />
@@ -154,6 +157,10 @@
     <Compile Include="Migrations\201701110326063_two.cs" />
     <Compile Include="Migrations\201701110326063_two.Designer.cs">
       <DependentUpon>201701110326063_two.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701130400405_ReceiptGeneration.cs" />
+    <Compile Include="Migrations\201701130400405_ReceiptGeneration.Designer.cs">
+      <DependentUpon>201701130400405_ReceiptGeneration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MemberModel.cs" />
@@ -211,6 +218,10 @@
     <TypeScriptCompile Include="src\app\member\member.component.ts" />
     <TypeScriptCompile Include="src\app\member\member.model.ts" />
     <TypeScriptCompile Include="src\app\member\member.service.ts" />
+    <TypeScriptCompile Include="src\app\offeredservices\app-offered-services.module.ts" />
+    <TypeScriptCompile Include="src\app\offeredservices\app-offered-services.routes.ts" />
+    <TypeScriptCompile Include="src\app\offeredservices\servicesformembers\services-for-members.service.ts" />
+    <TypeScriptCompile Include="src\app\offeredservices\servicesformembers\services-for-members.component.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="config\gulp\config.js" />
@@ -226,6 +237,7 @@
     <Content Include="src\app\home\home.css" />
     <Content Include="src\app\home\home.html" />
     <Content Include="src\app\member\member.html" />
+    <Content Include="src\app\offeredservices\servicesformembers\services-for-members.html" />
     <Content Include="src\assets\fonts\roboto-v15-latin-300.svg" />
     <Content Include="src\assets\fonts\roboto-v15-latin-700.svg" />
     <Content Include="src\assets\fonts\roboto-v15-latin-regular.svg" />
@@ -260,7 +272,11 @@
     <EmbeddedResource Include="Migrations\201701110326063_two.resx">
       <DependentUpon>201701110326063_two.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701130400405_ReceiptGeneration.resx">
+      <DependentUpon>201701130400405_ReceiptGeneration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

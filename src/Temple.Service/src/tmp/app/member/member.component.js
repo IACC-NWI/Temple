@@ -22,6 +22,7 @@ var MemberComponent = (function () {
     }
     MemberComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.memberNotFound = true;
         this.route.params.subscribe(function (params) {
             _this.memberId = params['memberId'];
             _this.memberForm = _this.formBuilder.group({
@@ -29,7 +30,7 @@ var MemberComponent = (function () {
                 FirstName: ['', [forms_1.Validators.required]],
                 LastName: ['', [forms_1.Validators.required]],
                 AddressLine1: ['', [forms_1.Validators.required]],
-                AddressLine2: ['', [forms_1.Validators.required]],
+                AddressLine2: [''],
                 City: ['', [forms_1.Validators.required]],
                 State: ['', [forms_1.Validators.required]],
                 Zip: ['', [forms_1.Validators.required]],
