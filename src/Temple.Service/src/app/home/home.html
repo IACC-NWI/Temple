@@ -7,10 +7,15 @@
                 <div class="ui-g-12">
                     <div class="ui-g">
                         <div class="ui-lg-12 ui-md-12 ui-g-12">
-                            <input pInputText type="tel" [(ngModel)]="memberId" placeholder="Member Number"/>
+                            <input pInputText type="tel" [(ngModel)]="memberId" placeholder="Member Number" />
                         </div>
                         <div class="ui-lg-12 ui-md-12 ui-g-12">
                             <button type="submit" pButton [routerLink]="['/member/', memberId]" label="Look-up"></button>
+                        </div>
+                    </div>
+                    <div class="ui-g">
+                        <div class="ui-lg-12 ui-md-12 ui-g-12">
+                            <button pButton [routerLink]="['/admin']" label="Admin"></button>
                         </div>
                     </div>
                 </div>

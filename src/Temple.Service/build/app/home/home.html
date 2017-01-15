@@ -1,8 +1,27 @@
-<div class="card card-w-title">
-    <h1>Lookup Member Info</h1>
-    <div class="ui-g">
-
-        <input pInputText type="tel" [(ngModel)]="memberId" placeholder="Member Number"/>
-        <button type="submit" pButton [routerLink]="['/member/', memberId]" label="Look-up"></button>
+<div class="ui-g ui-fluid">
+    <div class="ui-lg-4 ui-g-1 ui-md-4"></div>
+    <div class="ui-lg-4 ui-md-4 ui-g-10">
+        <div class="card card-w-title">
+            <h1>Lookup Member Info</h1>
+            <div class="ui-g form-group">
+                <div class="ui-g-12">
+                    <div class="ui-g">
+                        <div class="ui-lg-12 ui-md-12 ui-g-12">
+                            <input pInputText type="tel" [(ngModel)]="memberId" placeholder="Member Number" />
+                        </div>
+                        <div class="ui-lg-12 ui-md-12 ui-g-12">
+                            <button type="submit" pButton [routerLink]="['/member/', memberId]" label="Look-up"></button>
+                        </div>
+                    </div>
+                    <div class="ui-g">
+                        <div class="ui-lg-12 ui-md-12 ui-g-12">
+                            <button pButton [routerLink]="['/admin']" label="Admin"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="ui-lg-4 ui-g-1 ui-md-4"></div>
 </div>
+

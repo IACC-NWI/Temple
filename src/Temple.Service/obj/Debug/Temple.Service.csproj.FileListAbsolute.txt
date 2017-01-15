@@ -43,11 +43,8 @@ C:\Projects\IACC-NWI\Temple\src\Temple.Service\bin\Debug\Topshelf.Log4Net.xml
 C:\Projects\IACC-NWI\Temple\src\Temple.Service\obj\Debug\Temple.Service.csprojResolveAssemblyReference.cache
 C:\Projects\IACC-NWI\Temple\src\Temple.Service\obj\Debug\Temple.Service.exe
 C:\Projects\IACC-NWI\Temple\src\Temple.Service\obj\Debug\Temple.Service.pdb
-C:\Projects\IACC-NWI\Temple\src\Temple.Service\obj\Debug\Temple.Service.Migrations.InitialCreate.resources
-C:\Projects\IACC-NWI\Temple\src\Temple.Service\obj\Debug\Temple.Service.csproj.GenerateResource.Cache
 C:\Projects\IACC-NWI\Temple\src\Temple.Service\bin\Debug\Microsoft.Owin.Cors.dll
 C:\Projects\IACC-NWI\Temple\src\Temple.Service\bin\Debug\System.Web.Cors.dll
 C:\Projects\IACC-NWI\Temple\src\Temple.Service\bin\Debug\Microsoft.Owin.Cors.xml
-C:\Projects\IACC-NWI\Temple\src\Temple.Service\obj\Debug\Temple.Service.Migrations.InitialCreate1.resources
-C:\Projects\IACC-NWI\Temple\src\Temple.Service\obj\Debug\Temple.Service.Migrations.two.resources
-C:\Projects\IACC-NWI\Temple\src\Temple.Service\obj\Debug\Temple.Service.Migrations.ReceiptGeneration.resources
+C:\Projects\IACC-NWI\Temple\src\Temple.Service\obj\Debug\Temple.Service.Migrations.InitialCreate.resources
+C:\Projects\IACC-NWI\Temple\src\Temple.Service\obj\Debug\Temple.Service.csproj.GenerateResource.Cache

@@ -10,8 +10,10 @@ namespace Temple.Service.Database.Models
 {
     public class PerformedService
     {
-        public int Id { get; set; }
-        public DateTime Date { get; set; }
+        [Key]
+        public Guid Id { get; set; }
+        [Column(TypeName = "Date")]
+        public DateTime ExpectedDateOfOffering { get; set; }
         [MaxLength(10), ForeignKey("Member")]
         public string MemberId { get; set; }
 
@@ -31,5 +33,6 @@ namespace Temple.Service.Database.Models
 
         public string Priest { get; set; }
         public virtual Member Member { get; set; }
+        public DateTime CreationDate { get; set; }
     }
 }

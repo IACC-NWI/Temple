@@ -11,6 +11,8 @@ namespace Temple.Service.Models
     {
         [Required, MaxLength(10)]
         public string MemberId { get; set; }
+        [MaxLength(100)]
+        public string Email { get; set; }
         [Required, MaxLength(50)]
         public string FirstName { get; set; }
         [Required, MaxLength(50)]

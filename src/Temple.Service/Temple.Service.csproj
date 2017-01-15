@@ -146,24 +146,15 @@
     <Compile Include="Database\Models\Service.cs" />
     <Compile Include="Database\TempleDatabaseContext.cs" />
     <Compile Include="IOC\Installer.cs" />
-    <Compile Include="Migrations\201701100240442_InitialCreate.cs" />
-    <Compile Include="Migrations\201701100240442_InitialCreate.Designer.cs">
-      <DependentUpon>201701100240442_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701100315569_InitialCreate1.cs" />
-    <Compile Include="Migrations\201701100315569_InitialCreate1.Designer.cs">
-      <DependentUpon>201701100315569_InitialCreate1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701110326063_two.cs" />
-    <Compile Include="Migrations\201701110326063_two.Designer.cs">
-      <DependentUpon>201701110326063_two.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701130400405_ReceiptGeneration.cs" />
-    <Compile Include="Migrations\201701130400405_ReceiptGeneration.Designer.cs">
-      <DependentUpon>201701130400405_ReceiptGeneration.cs</DependentUpon>
+    <Compile Include="Migrations\201701142221329_InitialCreate.cs" />
+    <Compile Include="Migrations\201701142221329_InitialCreate.Designer.cs">
+      <DependentUpon>201701142221329_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\FestivalModel.cs" />
     <Compile Include="Models\MemberModel.cs" />
+    <Compile Include="Models\PerformedServiceModel.cs" />
+    <Compile Include="Models\ServiceModel.cs" />
     <Compile Include="OwinStartup.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -176,6 +167,12 @@
     </None>
     <None Include="package.json" />
     <None Include="packages.config" />
+    <TypeScriptCompile Include="src\app\admin\admin.service.ts" />
+    <TypeScriptCompile Include="src\app\admin\admin.component.ts" />
+    <TypeScriptCompile Include="src\app\admin\app-admin.module.ts" />
+    <TypeScriptCompile Include="src\app\admin\app-admin.routes.ts" />
+    <TypeScriptCompile Include="src\app\admin\festival.model.ts" />
+    <TypeScriptCompile Include="src\app\admin\service.model.ts" />
     <TypeScriptCompile Include="src\app\home\app-home.routes.ts" />
     <TypeScriptCompile Include="src\app\member\app-member.routes.ts" />
     <None Include="src\assets\fonts\MaterialIcons-Regular.eot" />
@@ -233,6 +230,7 @@
     <Content Include="config\gulp\tasks\serve.js" />
     <Content Include="config\gulp\tasks\typescript.js" />
     <Content Include="gulpfile.js" />
+    <Content Include="src\app\admin\admin.html" />
     <Content Include="src\app\app.html" />
     <Content Include="src\app\home\home.css" />
     <Content Include="src\app\home\home.html" />
@@ -263,17 +261,8 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Build\**\*" />
-    <EmbeddedResource Include="Migrations\201701100240442_InitialCreate.resx">
-      <DependentUpon>201701100240442_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701100315569_InitialCreate1.resx">
-      <DependentUpon>201701100315569_InitialCreate1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701110326063_two.resx">
-      <DependentUpon>201701110326063_two.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701130400405_ReceiptGeneration.resx">
-      <DependentUpon>201701130400405_ReceiptGeneration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701142221329_InitialCreate.resx">
+      <DependentUpon>201701142221329_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

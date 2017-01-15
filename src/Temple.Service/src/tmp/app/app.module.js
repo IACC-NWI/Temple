@@ -18,6 +18,7 @@ var app_routes_1 = require('./app.routes');
 var app_component_1 = require('./app.component');
 var app_home_module_1 = require('./home/app-home.module');
 var app_member_module_1 = require('./member/app-member.module');
+var app_admin_module_1 = require('./admin/app-admin.module');
 var app_offered_services_module_1 = require('./offeredservices/app-offered-services.module');
 var routing = router_1.RouterModule.forRoot(app_routes_1.AppRoutes);
 var AppModule = (function () {
@@ -34,7 +35,8 @@ var AppModule = (function () {
                 forms_1.ReactiveFormsModule,
                 app_home_module_1.AppHomeModule,
                 app_member_module_1.AppMemberModule,
-                app_offered_services_module_1.AppOfferedServicesModule
+                app_offered_services_module_1.AppOfferedServicesModule,
+                app_admin_module_1.AppAdminModule
             ],
             declarations: [
                 app_component_1.AppComponent

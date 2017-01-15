@@ -1,0 +1,108 @@
+<div class="ui-g ui-fluid">
+    <div class="ui-lg-2 ui-g-1 ui-md-1"></div>
+    <div class="ui-lg-8 ui-md-10 ui-g-10">
+
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>Festivals</h1>
+
+                    <div class="ui-g">
+                        <div class="ui-g-6">
+                            <div class="ui-g form-group">
+                                <div class="ui-g-12">
+                                    <form [formGroup]="festivalForm" novalidate>
+                                        <div class="ui-g">
+                                            <div class="ui-lg-12 ui-md-12 ui-g-12">
+                                                <label>Festival Name</label>
+                                                <input type="text" formControlName="Name" pInputText>
+                                                <small [hidden]="festivalForm.controls.Name.valid || (!submitted)">
+                                                    Festival Name is required
+                                                </small>
+                                            </div>
+
+                                        </div>
+                                        <div class="ui-g">
+                                            <div class="ui-lg-12 ui-md-12 ui-g-12">
+                                                <button type="submit" pButton label="Submit" [disabled]="!festivalForm.valid" (click)="saveFestival(festivalForm.value, festivalForm.valid)"></button>
+                                            </div>
+                                        </div>
+                                    </form> <!-- Festival Form-->
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="ui-g-6">
+                            <p-listbox [options]="availableFestivals" [(ngModel)]="selectedFestival"></p-listbox>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>Services Offered</h1>
+                    <div class="ui-g">
+                        <div class="ui-g-6">
+                            <div class="ui-g form-group">
+                                <div class="ui-g-12">
+                                    <form [formGroup]="serviceForm" novalidate>
+                                        <div class="ui-g">
+                                            <div class="ui-lg-12 ui-md-12 ui-g-12">
+                                                <label>Festival Name</label>
+                                                <input type="text" formControlName="Name" pInputText>
+                                                <small [hidden]="serviceForm.controls.Name.valid || (!submitted)">
+                                                    Service Name is required
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="ui-g">
+                                            <div class="ui-lg-12 ui-md-12 ui-g-12">
+                                                <label>Offering Type</label>
+                                                <input type="text" formControlName="TypeOfService" pInputText>
+                                                <small [hidden]="serviceForm.controls.TypeOfService.valid || (!submitted)">
+                                                    Type of Service is required
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="ui-g">
+                                            <div class="ui-lg-12 ui-md-12 ui-g-12">
+                                                <label>Suggested Donation ($)</label>
+                                                <input type="number" formControlName="SuggestedDonation" pInputText>
+                                                <small [hidden]="serviceForm.controls.SuggestedDonation.valid || (!submitted)">
+                                                    Type of Service is required
+                                                </small>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="ui-g">
+                                            <div class="ui-lg-12 ui-md-12 ui-g-12">
+                                                <label>Description</label>
+                                                <p-editor [style]="{'height':'320px'}" formControlName="Description"></p-editor>
+                                                <small [hidden]="serviceForm.controls.Description.valid || (!submitted)">
+                                                    Description is required
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="ui-g">
+                                            <div class="ui-lg-12 ui-md-12 ui-g-12">
+                                                <button type="submit" pButton label="Submit" [disabled]="!serviceForm.valid" (click)="saveService(serviceForm.value, serviceForm.valid)"></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-g-6">
+                            <p-listbox [options]="availableServices" [(ngModel)]="selectedServices"></p-listbox>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui-lg-2 ui-g-1 ui-md-1"></div>
+</div>
