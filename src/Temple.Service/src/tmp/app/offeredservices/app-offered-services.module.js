@@ -25,6 +25,8 @@ var AppOfferedServicesModule = (function () {
                 forms_1.FormsModule,
                 forms_1.ReactiveFormsModule,
                 primeng_1.ButtonModule,
+                primeng_1.DropdownModule,
+                primeng_1.CalendarModule,
                 router_1.RouterModule.forChild(app_offered_services_routes_1.AppOfferedServicesRoutes)],
             declarations: [services_for_members_component_1.ServicesForMembersComponent],
             providers: [

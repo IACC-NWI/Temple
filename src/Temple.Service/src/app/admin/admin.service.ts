@@ -6,11 +6,11 @@ import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-import { FestivalModel } from './festival.model'
+import { FestivalModel } from './festival.model';
 import { ServiceModel } from './service.model';
 @Injectable()
 export class AdminService {
-    private templeService = "http://localhost:30010/";
+    private templeService = 'http://localhost:30010/';
 
     constructor(private http: Http) { }
 

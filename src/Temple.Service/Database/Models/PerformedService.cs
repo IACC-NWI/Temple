@@ -11,7 +11,7 @@ namespace Temple.Service.Database.Models
     public class PerformedService
     {
         [Key]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         [Column(TypeName = "Date")]
         public DateTime ExpectedDateOfOffering { get; set; }
         [MaxLength(10), ForeignKey("Member")]

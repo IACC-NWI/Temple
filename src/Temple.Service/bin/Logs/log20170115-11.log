@@ -1,0 +1,9 @@
+2017-01-15 11:47:46,978 [8] INFO  Topshelf.HostFactory - Configuration Result:
+[Success] Name Temple.Service
+[Success] DisplayName Temple Service
+[Success] Description Temple Service
+[Success] ServiceName Temple.Service
+2017-01-15 11:47:47,015 [8] INFO  Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-01-15 11:47:49,292 [8] DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2017-01-15 11:47:49,310 [8] DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2017-01-15 11:47:50,467 [8] INFO  Topshelf.Hosts.ConsoleRunHost - The Temple.Service service is now running, press Control+C to exit.

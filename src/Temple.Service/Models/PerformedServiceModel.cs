@@ -10,8 +10,7 @@ namespace Temple.Service.Models
 {
     public class PerformedServiceModel
     {
-        [Required]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         [Column(TypeName = "Date"), Required]
         public DateTime ExpectedDateOfOffering { get; set; }
         [MaxLength(10), Required]
@@ -25,7 +24,7 @@ namespace Temple.Service.Models
         [MaxLength(50), Required]
         public string PerformedForLastName { get; set; }
 
-        [MaxLength(20), Required]
+        [MaxLength(20)]
         public string ServiceType { get; set; }
         [MaxLength(500), Required]
         public string ServiceName { get; set; }

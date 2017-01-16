@@ -262,18 +262,27 @@ namespace Temple.Service.Controllers
         }
 
         [Route("getServices")]
-        [HttpPost]
+        [HttpGet]
         public async Task<IHttpActionResult> GetAllServices()
         {
-            var services = await _templeDatabaseContext.Services.ToListAsync();
-            return Ok(services.Select(t => new ServiceModel
+            try
             {
-                Id = t.Id,
-                Name = t.Name,
-                SuggestedDonation = t.SuggestedDonation,
-                Description = t.Description,
-                TypeOfService = t.TypeOfService
-            }).ToList());
+                var services = await _templeDatabaseContext.Services.ToListAsync();
+                return Ok(services.Select(t => new ServiceModel
+                {
+                    Id = t.Id,
+                    Name = t.Name,
+                    SuggestedDonation = t.SuggestedDonation,
+                    Description = t.Description,
+                    TypeOfService = t.TypeOfService
+                }).ToList());
+            }
+            catch (Exception ex)
+            {
+                
+                throw;
+            }
+            
         }
         #endregion
 
@@ -291,7 +300,6 @@ namespace Temple.Service.Controllers
                 {
                     MemberId = model.MemberId,
                     Festival = model.Festival,
-                    Id = model.Id,
                     ServiceName = model.ServiceName,
                     AmountDonated = model.AmountDonated,
                     CreationDate = DateTime.Now,
@@ -304,6 +312,7 @@ namespace Temple.Service.Controllers
                 };
                 _templeDatabaseContext.PerformedServices.Add(svcPerformed);
                 await _templeDatabaseContext.SaveChangesAsync();
+                model.Id = svcPerformed.Id;
                 return Ok(model);
             }
             catch (Exception exception)

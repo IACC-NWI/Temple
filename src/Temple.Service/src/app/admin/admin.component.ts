@@ -1,5 +1,5 @@
 ﻿import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { SelectItem } from 'primeng/primeng';
 
@@ -62,7 +62,7 @@ export class AdminComponent implements OnInit {
         this.availableServices = new Array<SelectItem>();
         this.adminService.getServices()
             .subscribe(t => {
-                t.forEach(m => { this.availableServices.push({ label: m.Name, value: m.Id }) });
+                t.forEach(m => { this.availableServices.push({ label: m.Name, value: m.Id }); });
             });
     }
 }

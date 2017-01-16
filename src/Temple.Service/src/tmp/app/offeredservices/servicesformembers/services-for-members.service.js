@@ -9,15 +9,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
+var Rx_1 = require('rxjs/Rx');
 // Import RxJs required methods
 require('rxjs/add/operator/map');
 require('rxjs/add/operator/catch');
 var ServicesForMembersService = (function () {
-    function ServicesForMembersService() {
+    function ServicesForMembersService(http) {
+        this.http = http;
+        this.templeService = 'http://localhost:30010/';
     }
+    ServicesForMembersService.prototype.getMember = function (memberId) {
+        return this.http.get(this.templeService + 'api/temple/getMember/' + memberId)
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
+    };
+    ServicesForMembersService.prototype.getOfferedServices = function () {
+        return this.http.get(this.templeService + 'api/temple/getServices')
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
+    };
+    ServicesForMembersService.prototype.getOfferedFestivals = function () {
+        return this.http.get(this.templeService + 'api/temple/getFestivals')
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
+    };
+    ServicesForMembersService.prototype.savePerformedService = function (model) {
+        return this.http.post(this.templeService + 'api/temple/addPerformedService', model)
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
+    };
     ServicesForMembersService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], ServicesForMembersService);
     return ServicesForMembersService;
 }());

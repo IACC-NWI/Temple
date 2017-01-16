@@ -1,1 +1,97 @@
-﻿<div></div>
+﻿<div class="ui-g ui-fluid">
+    <div class="ui-lg-4 ui-g-1 ui-md-3"></div>
+    <div class="ui-lg-4 ui-md-6 ui-g-10">
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <div class="card card-w-title">
+                    <h1>Select a service to be performed</h1>
+                    <form [formGroup]="performServiceForm" novalidate>
+                        <div class="ui-g">
+                            <div class="ui-lg-12 ui-md-12 ui-g-12">
+                                <label>MemberId</label>
+                                <input type="text" formControlName="MemberId" pInputText>
+                                <small [hidden]="performServiceForm.controls.MemberId.valid || (!submitted)">
+                                    MemberId is required
+                                </small>
+                            </div>
+                        </div>
+                        <div class="ui-g">
+                            <div class="ui-g-6">
+                                <label>First Name</label>
+                                <input type="text" formControlName="PerformedForFirstName" pInputText>
+                                <small [hidden]="performServiceForm.controls.PerformedForFirstName.valid || (!submitted)">
+                                    Performed For First Name is required
+                                </small>
+                            </div>
+                            <div class="ui-g-6">
+                                <label>Last Name</label>
+                                <input type="text" formControlName="PerformedForLastName" pInputText>
+                                <small [hidden]="performServiceForm.controls.PerformedForLastName.valid || (!submitted)">
+                                    Performed For Last Name is required
+                                </small>
+                            </div>
+                        </div>
+                        <div class="ui-g">
+                            <div class="ui-g-12">
+                                <label>Festival</label>
+                                <p-dropdown [options]="offeredFestivals" formControlName="Festival" [autoWidth]="false"></p-dropdown>
+                                <small [hidden]="performServiceForm.controls.Festival.valid || (!submitted)">
+                                    Festival is required
+                                </small>
+                            </div>
+
+                        </div>
+                        <div class="ui-g">
+                            <div class="ui-g-6">
+                                <label>Service</label>
+                                <p-dropdown [options]="offeredServices" [autoWidth]="false" (onChange)="onNewServiceSelected($event)"></p-dropdown>
+                                <small [hidden]="performServiceForm.controls.ServiceName.valid || (!submitted)">
+                                    Service Name is required
+                                </small>
+                            </div>
+                            <div class="ui-g-6">
+                                <label>Offering Date</label>
+                                <p-calendar id="showIcon" [showIcon]="true"  formControlName="ExpectedDateOfOffering"></p-calendar>
+                                <small [hidden]="performServiceForm.controls.ExpectedDateOfOffering.valid || (!submitted)">
+                                    Expected Date of Offering is required
+                                </small>
+                            </div>
+                        </div>
+                        <div class="ui-g">
+                            <div class="ui-g-6">
+                                <div class="ui-g">
+                                    <label>Suggested Donation</label>
+                                </div>
+                                <div class="ui-g">
+                                    $ &nbsp;{{suggestedDonation }}
+                                </div>
+                                
+                            </div>
+                            <div class="ui-g-6">
+                                <label>Your Donation</label>
+                                <input type="text" formControlName="AmountDonated" pInputText>
+                                <small [hidden]="performServiceForm.controls.AmountDonated.valid || (!submitted)">
+                                    Amount is Required.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="ui-g">
+                            <div class="ui-g-12">
+                                <label>Priest</label>
+                                <input type="text" formControlName="Priest" pInputText>
+
+                            </div>
+                        </div>
+                        <div class="ui-g">
+                            <div class="ui-g-12">
+                                <button type="submit" pButton label="Submit" [disabled]="!performServiceForm.valid" (click)="save(performServiceForm.value, performServiceForm.valid)"></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-lg-4 ui-g-1 ui-md-3"></div>
+</div>
+

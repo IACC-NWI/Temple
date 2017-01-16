@@ -1,0 +1,11 @@
+2017-01-15 12:33:04,117 [9] INFO  Topshelf.HostFactory - Configuration Result:
+[Success] Name Temple.Service
+[Success] DisplayName Temple Service
+[Success] Description Temple Service
+[Success] ServiceName Temple.Service
+2017-01-15 12:33:04,236 [9] INFO  Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-01-15 12:33:05,009 [9] DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2017-01-15 12:33:05,021 [9] DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2017-01-15 12:33:07,315 [9] INFO  Topshelf.Hosts.ConsoleRunHost - The Temple.Service service is now running, press Control+C to exit.
+2017-01-15 12:34:24,940 [12] INFO  Temple.Service.Controllers.TempleController - Adding new festival: Lori
+2017-01-15 12:47:33,679 [14] INFO  Temple.Service.Controllers.TempleController - Adding new festival: Durga Pooja

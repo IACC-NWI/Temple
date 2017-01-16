@@ -75,7 +75,7 @@
                                 </small>
                             </div>
                             <div class="ui-lg-4 ui-md-4 ui-g-12">
-                                <label>State</label>
+                                <label>Zip</label>
                                 <input type="text" formControlName="Zip" pInputText>
                                 <small [hidden]="memberForm.controls.Zip.valid || (!submitted)">
                                     Zip is required.
@@ -89,11 +89,10 @@
                                 <button type="submit" pButton label="Submit" [disabled]="!memberForm.valid" (click)="save(memberForm.value, memberForm.valid)"></button>
                             </div>
                             <div class="ui-lg-6 ui-md-6 ui-g-12" [hidden]="memberNotFound">
-                                <button [disabled]="!memberForm.valid" pButton label="Choose Service" [routerLink]="['/servicesformembers/', memberId]"></button>
+                                <button [disabled]="!memberForm.valid" pButton label="Choose Service" [routerLink]="['/servicesformembers/', memberId, mbr.FirstName, mbr.LastName]"></button>
                             </div>
                         </div>
-
-
+                        
                     </form>
                 </div>
             </div>

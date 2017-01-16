@@ -146,9 +146,9 @@
     <Compile Include="Database\Models\Service.cs" />
     <Compile Include="Database\TempleDatabaseContext.cs" />
     <Compile Include="IOC\Installer.cs" />
-    <Compile Include="Migrations\201701142221329_InitialCreate.cs" />
-    <Compile Include="Migrations\201701142221329_InitialCreate.Designer.cs">
-      <DependentUpon>201701142221329_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201701151832255_InitialCreate.cs" />
+    <Compile Include="Migrations\201701151832255_InitialCreate.Designer.cs">
+      <DependentUpon>201701151832255_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FestivalModel.cs" />
@@ -217,6 +217,10 @@
     <TypeScriptCompile Include="src\app\member\member.service.ts" />
     <TypeScriptCompile Include="src\app\offeredservices\app-offered-services.module.ts" />
     <TypeScriptCompile Include="src\app\offeredservices\app-offered-services.routes.ts" />
+    <TypeScriptCompile Include="src\app\offeredservices\servicesformembers\member-info.model.ts" />
+    <TypeScriptCompile Include="src\app\offeredservices\servicesformembers\offered-festival.model.ts" />
+    <TypeScriptCompile Include="src\app\offeredservices\servicesformembers\offered-service.model.ts" />
+    <TypeScriptCompile Include="src\app\offeredservices\servicesformembers\performed-service.model.ts" />
     <TypeScriptCompile Include="src\app\offeredservices\servicesformembers\services-for-members.service.ts" />
     <TypeScriptCompile Include="src\app\offeredservices\servicesformembers\services-for-members.component.ts" />
   </ItemGroup>
@@ -261,8 +265,8 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Build\**\*" />
-    <EmbeddedResource Include="Migrations\201701142221329_InitialCreate.resx">
-      <DependentUpon>201701142221329_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701151832255_InitialCreate.resx">
+      <DependentUpon>201701151832255_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

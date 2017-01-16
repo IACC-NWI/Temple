@@ -23,6 +23,7 @@ var MemberComponent = (function () {
     MemberComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.memberNotFound = true;
+        this.mbr = new member_model_1.Member();
         this.route.params.subscribe(function (params) {
             _this.memberId = params['memberId'];
             _this.memberForm = _this.formBuilder.group({
@@ -39,17 +40,16 @@ var MemberComponent = (function () {
             });
             _this.memberService.getMember(_this.memberId).subscribe(function (data) {
                 _this.memberNotFound = data.MemberNotFound;
-                var mbr = new member_model_1.Member();
-                mbr.AddressLine1 = data.AddressLine1;
-                mbr.AddressLine2 = data.AddressLine2;
-                mbr.City = data.City;
-                mbr.FamilySize = data.FamilySize;
-                mbr.FirstName = data.FirstName;
-                mbr.LastName = data.LastName;
-                mbr.MemberId = data.MemberId;
-                mbr.State = data.State;
-                mbr.Zip = data.Zip;
-                mbr.MemberNotFound = data.MemberNotFound;
+                _this.mbr.AddressLine1 = data.AddressLine1;
+                _this.mbr.AddressLine2 = data.AddressLine2;
+                _this.mbr.City = data.City;
+                _this.mbr.FamilySize = data.FamilySize;
+                _this.mbr.FirstName = data.FirstName;
+                _this.mbr.LastName = data.LastName;
+                _this.mbr.MemberId = data.MemberId;
+                _this.mbr.State = data.State;
+                _this.mbr.Zip = data.Zip;
+                _this.mbr.MemberNotFound = data.MemberNotFound;
                 var MemberId = _this.memberForm.controls['MemberId'];
                 var FirstName = _this.memberForm.controls['FirstName'];
                 var LastName = _this.memberForm.controls['LastName'];
@@ -60,26 +60,51 @@ var MemberComponent = (function () {
                 var Zip = _this.memberForm.controls['Zip'];
                 var FamilySize = _this.memberForm.controls['FamilySize'];
                 var MemberNotFound = _this.memberForm.controls['MemberNotFound'];
-                MemberId.setValue(mbr.MemberId);
-                AddressLine1.setValue(mbr.AddressLine1);
-                AddressLine2.setValue(mbr.AddressLine2);
-                City.setValue(mbr.City);
-                FamilySize.setValue(mbr.FamilySize);
-                FirstName.setValue(mbr.FirstName);
-                LastName.setValue(mbr.LastName);
-                MemberId.setValue(mbr.MemberId);
-                State.setValue(mbr.State);
-                Zip.setValue(mbr.Zip);
-                MemberNotFound.setValue(mbr.MemberNotFound);
+                MemberId.setValue(_this.mbr.MemberId);
+                AddressLine1.setValue(_this.mbr.AddressLine1);
+                AddressLine2.setValue(_this.mbr.AddressLine2);
+                City.setValue(_this.mbr.City);
+                FamilySize.setValue(_this.mbr.FamilySize);
+                FirstName.setValue(_this.mbr.FirstName);
+                LastName.setValue(_this.mbr.LastName);
+                MemberId.setValue(_this.mbr.MemberId);
+                State.setValue(_this.mbr.State);
+                Zip.setValue(_this.mbr.Zip);
+                MemberNotFound.setValue(_this.mbr.MemberNotFound);
             });
         });
     };
     MemberComponent.prototype.save = function (model, isValid) {
+        var _this = this;
         if (model.MemberNotFound) {
-            this.memberService.addMember(model).subscribe(function (t) { return console.log(t); });
+            this.memberService.addMember(model).subscribe(function (data) {
+                _this.memberNotFound = data.MemberNotFound;
+                _this.mbr.AddressLine1 = data.AddressLine1;
+                _this.mbr.AddressLine2 = data.AddressLine2;
+                _this.mbr.City = data.City;
+                _this.mbr.FamilySize = data.FamilySize;
+                _this.mbr.FirstName = data.FirstName;
+                _this.mbr.LastName = data.LastName;
+                _this.mbr.MemberId = data.MemberId;
+                _this.mbr.State = data.State;
+                _this.mbr.Zip = data.Zip;
+                _this.mbr.MemberNotFound = data.MemberNotFound;
+            });
         }
         else {
-            this.memberService.updateMember(model).subscribe(function (t) { return console.log(t); });
+            this.memberService.updateMember(model).subscribe(function (data) {
+                _this.memberNotFound = data.MemberNotFound;
+                _this.mbr.AddressLine1 = data.AddressLine1;
+                _this.mbr.AddressLine2 = data.AddressLine2;
+                _this.mbr.City = data.City;
+                _this.mbr.FamilySize = data.FamilySize;
+                _this.mbr.FirstName = data.FirstName;
+                _this.mbr.LastName = data.LastName;
+                _this.mbr.MemberId = data.MemberId;
+                _this.mbr.State = data.State;
+                _this.mbr.Zip = data.Zip;
+                _this.mbr.MemberNotFound = data.MemberNotFound;
+            });
         }
     };
     MemberComponent = __decorate([

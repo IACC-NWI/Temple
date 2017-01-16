@@ -14,6 +14,7 @@ export class MemberComponent implements OnInit {
     public memberForm: FormGroup;
     public memberId: string;
     memberNotFound: boolean;
+    mbr: Member;
     constructor(private route: ActivatedRoute,
         private router: Router, private formBuilder: FormBuilder,
         private memberService: MemberService) {
@@ -21,6 +22,7 @@ export class MemberComponent implements OnInit {
 
     ngOnInit() {
         this.memberNotFound = true;
+        this.mbr = new Member();
         this.route.params.subscribe(params => {
             this.memberId = params['memberId'];
             this.memberForm = this.formBuilder.group({
@@ -37,18 +39,17 @@ export class MemberComponent implements OnInit {
             });
             this.memberService.getMember(this.memberId).subscribe(data => {
                     this.memberNotFound = data.MemberNotFound;
-                    let mbr = new Member();
-                    mbr.AddressLine1 = data.AddressLine1;
-                    mbr.AddressLine2 = data.AddressLine2;
-                    mbr.City = data.City;
-                    mbr.FamilySize = data.FamilySize;
-                    mbr.FirstName = data.FirstName;
-                    mbr.LastName = data.LastName;
-                    mbr.MemberId = data.MemberId;
-                    mbr.State = data.State;
-                    mbr.Zip = data.Zip;
-                    mbr.MemberNotFound = data.MemberNotFound;
 
+                    this.mbr.AddressLine1 = data.AddressLine1;
+                    this.mbr.AddressLine2 = data.AddressLine2;
+                    this.mbr.City = data.City;
+                    this.mbr.FamilySize = data.FamilySize;
+                    this.mbr.FirstName = data.FirstName;
+                    this.mbr.LastName = data.LastName;
+                    this.mbr.MemberId = data.MemberId;
+                    this.mbr.State = data.State;
+                    this.mbr.Zip = data.Zip;
+                    this.mbr.MemberNotFound = data.MemberNotFound;
 
                     let MemberId = <FormControl>this.memberForm.controls['MemberId'];
                     let FirstName = <FormControl>this.memberForm.controls['FirstName'];
@@ -61,18 +62,18 @@ export class MemberComponent implements OnInit {
                     let FamilySize = <FormControl>this.memberForm.controls['FamilySize'];
                     let MemberNotFound = <FormControl>this.memberForm.controls['MemberNotFound'];
 
-                    MemberId.setValue(mbr.MemberId);
+                    MemberId.setValue(this.mbr.MemberId);
 
-                    AddressLine1.setValue(mbr.AddressLine1);
-                    AddressLine2.setValue(mbr.AddressLine2);
-                    City.setValue(mbr.City);
-                    FamilySize.setValue(mbr.FamilySize);
-                    FirstName.setValue(mbr.FirstName);
-                    LastName.setValue(mbr.LastName);
-                    MemberId.setValue(mbr.MemberId);
-                    State.setValue(mbr.State);
-                    Zip.setValue(mbr.Zip);
-                    MemberNotFound.setValue(mbr.MemberNotFound);
+                    AddressLine1.setValue(this.mbr.AddressLine1);
+                    AddressLine2.setValue(this.mbr.AddressLine2);
+                    City.setValue(this.mbr.City);
+                    FamilySize.setValue(this.mbr.FamilySize);
+                    FirstName.setValue(this.mbr.FirstName);
+                    LastName.setValue(this.mbr.LastName);
+                    MemberId.setValue(this.mbr.MemberId);
+                    State.setValue(this.mbr.State);
+                    Zip.setValue(this.mbr.Zip);
+                    MemberNotFound.setValue(this.mbr.MemberNotFound);
 
                 }
             );
@@ -81,9 +82,35 @@ export class MemberComponent implements OnInit {
 
     save(model: Member, isValid: boolean) {
         if (model.MemberNotFound) {
-            this.memberService.addMember(model).subscribe(t => console.log(t));
+            this.memberService.addMember(model).subscribe(data => {
+                this.memberNotFound = data.MemberNotFound;
+
+                this.mbr.AddressLine1 = data.AddressLine1;
+                this.mbr.AddressLine2 = data.AddressLine2;
+                this.mbr.City = data.City;
+                this.mbr.FamilySize = data.FamilySize;
+                this.mbr.FirstName = data.FirstName;
+                this.mbr.LastName = data.LastName;
+                this.mbr.MemberId = data.MemberId;
+                this.mbr.State = data.State;
+                this.mbr.Zip = data.Zip;
+                this.mbr.MemberNotFound = data.MemberNotFound;
+            });
         } else {
-            this.memberService.updateMember(model).subscribe(t => console.log(t));
+            this.memberService.updateMember(model).subscribe(data => {
+                this.memberNotFound = data.MemberNotFound;
+
+                this.mbr.AddressLine1 = data.AddressLine1;
+                this.mbr.AddressLine2 = data.AddressLine2;
+                this.mbr.City = data.City;
+                this.mbr.FamilySize = data.FamilySize;
+                this.mbr.FirstName = data.FirstName;
+                this.mbr.LastName = data.LastName;
+                this.mbr.MemberId = data.MemberId;
+                this.mbr.State = data.State;
+                this.mbr.Zip = data.Zip;
+                this.mbr.MemberNotFound = data.MemberNotFound;
+            });
         }
 
     }

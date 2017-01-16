@@ -17,7 +17,7 @@ require('rxjs/add/operator/catch');
 var AdminService = (function () {
     function AdminService(http) {
         this.http = http;
-        this.templeService = "http://localhost:30010/";
+        this.templeService = 'http://localhost:30010/';
     }
     AdminService.prototype.saveFestival = function (model) {
         return this.http.post(this.templeService + 'api/temple/addnewfestival', model)

@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/offeredservices/servicesformembers/member-info.model.ts"],"names":[],"mappings":";AAAA;IAAA;IAIA,CAAC;IAAD,sBAAC;AAAD,CAJA,AAIC,IAAA;AAJY,uBAAe,kBAI3B,CAAA","file":"member-info.model.js","sourcesContent":["export class MemberInfoModel {\r\n    MemberId: string;\r\n    FirstName: string;\r\n    LastName: string;\r\n}\r\n"]}
