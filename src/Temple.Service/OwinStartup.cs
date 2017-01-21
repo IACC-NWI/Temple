@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net.Http.Formatting;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using IdentityServer3.AccessTokenValidation;
 using Microsoft.Owin;
 using Microsoft.Owin.Cors;
 using Newtonsoft.Json;
@@ -46,6 +49,17 @@ namespace Temple.Service
                 EnableDefaultFiles = true,
                 RequestPath = new PathString("")
             });
+            var requiredScopes = ConfigurationManager.AppSettings["RequiredScopes"];
+            var scopes = requiredScopes.Contains(",")
+                ? requiredScopes.Split(new[] {','}).ToList()
+                : new List<string> {requiredScopes};
+            app.UseIdentityServerBearerTokenAuthentication(new IdentityServerBearerTokenAuthenticationOptions
+            {
+                Authority = ConfigurationManager.AppSettings["IdentityUrl"],
+                RequiredScopes = scopes
+            });
+
+            
 
         }
     }

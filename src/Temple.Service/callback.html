@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>UIT Trade Portal</title>
+</head>
+<body>
+    <script src="evnSettings/authsettings.js"></script>
+
+    <!-- build:js assets/silentcallbacklib.js -->
+    <!-- Load libraries -->
+    <script src="../node_modules/zone.js/dist/zone.js"></script>
+    <script src="../node_modules/oidc-client/lib/oidc-client.js"></script>
+
+    <!-- endbuild -->
+
+    <script>
+    var mgr = new UserManager(settings);
+    mgr.signinPopupCallback();
+
+
+    </script>
+
+</body>
+</html>

@@ -14,9 +14,11 @@ var forms_1 = require('@angular/forms');
 var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
 var primeng_1 = require('primeng/primeng');
+var app_shared_module_1 = require('./shared/app-shared.module');
 var app_routes_1 = require('./app.routes');
 var app_component_1 = require('./app.component');
 var app_home_module_1 = require('./home/app-home.module');
+var app_login_module_1 = require('./login/app-login.module');
 var app_member_module_1 = require('./member/app-member.module');
 var app_admin_module_1 = require('./admin/app-admin.module');
 var app_offered_services_module_1 = require('./offeredservices/app-offered-services.module');
@@ -33,7 +35,9 @@ var AppModule = (function () {
                 primeng_1.GrowlModule,
                 forms_1.FormsModule,
                 forms_1.ReactiveFormsModule,
+                app_shared_module_1.AppSharedModule.forRoot(),
                 app_home_module_1.AppHomeModule,
+                app_login_module_1.AppLoginModule,
                 app_member_module_1.AppMemberModule,
                 app_offered_services_module_1.AppOfferedServicesModule,
                 app_admin_module_1.AppAdminModule

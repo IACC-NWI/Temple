@@ -288,6 +288,7 @@ namespace Temple.Service.Controllers
 
         [Route("addPerformedService")]
         [HttpPost]
+        [Authorize]
         public async Task<IHttpActionResult> AddPerformedService(PerformedServiceModel model )
         {
             if (!ModelState.IsValid)
@@ -310,7 +311,7 @@ namespace Temple.Service.Controllers
                     ServiceType = model.ServiceType,
                     SuggestedAmountForService = model.SuggestedAmountForService
                 };
-                _templeDatabaseContext.PerformedServices.Add(svcPerformed);
+                _templeDatabaseContext.PerformedServices.Add(svcPerformed); 
                 await _templeDatabaseContext.SaveChangesAsync();
                 model.Id = svcPerformed.Id;
                 return Ok(model);
@@ -324,6 +325,7 @@ namespace Temple.Service.Controllers
 
         [Route("updatePerformedService")]
         [HttpPost]
+        [Authorize]
         public async Task<IHttpActionResult> UpdatePerformedService(PerformedServiceModel model)
         {
             if (!ModelState.IsValid)
@@ -359,6 +361,7 @@ namespace Temple.Service.Controllers
         
         [Route("getServiceByMember/{memberId}")]
         [HttpGet]
+        [Authorize]
         public async Task<IHttpActionResult> GetServicesByMember(string memberId)
         {
             var servicesPerformedByMember =
@@ -380,6 +383,7 @@ namespace Temple.Service.Controllers
         }
         [Route("getServiceByMemberForRange/{memberId}/{startDate}/{endDate}")]
         [HttpGet]
+        [Authorize]
         public async Task<IHttpActionResult> GetServicesByMemberForRange(string memberId, DateTime startDate, DateTime endDate)
         {
             var servicesPerformedByMember =

@@ -50,8 +50,20 @@
       <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="IdentityModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IdentityModel.1.9.2\lib\net45\IdentityModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IdentityServer3.AccessTokenValidation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IdentityServer3.AccessTokenValidation.2.13.0\lib\net45\IdentityServer3.AccessTokenValidation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocol.Extensions, Version=1.0.2.33, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.IdentityModel.Protocol.Extensions.1.0.2.206221351\lib\net45\Microsoft.IdentityModel.Protocol.Extensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -74,12 +86,24 @@
       <HintPath>..\..\packages\Microsoft.Owin.Hosting.3.0.1\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Jwt, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Jwt.3.0.1\lib\net45\Microsoft.Owin.Security.Jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Owin.StaticFiles, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Owin.StaticFiles.3.0.1\lib\net45\Microsoft.Owin.StaticFiles.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
@@ -98,10 +122,16 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.20622.1351, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.IdentityModel.Tokens.Jwt.4.0.2.206221351\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web.Cors, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
       <Private>True</Private>
@@ -174,6 +204,9 @@
     <TypeScriptCompile Include="src\app\admin\festival.model.ts" />
     <TypeScriptCompile Include="src\app\admin\service.model.ts" />
     <TypeScriptCompile Include="src\app\home\app-home.routes.ts" />
+    <TypeScriptCompile Include="src\app\login\app-login.module.ts" />
+    <TypeScriptCompile Include="src\app\login\app-login.routes.ts" />
+    <TypeScriptCompile Include="src\app\login\login.component.ts" />
     <TypeScriptCompile Include="src\app\member\app-member.routes.ts" />
     <None Include="src\assets\fonts\MaterialIcons-Regular.eot" />
     <None Include="src\assets\fonts\MaterialIcons-Regular.ttf" />
@@ -223,8 +256,16 @@
     <TypeScriptCompile Include="src\app\offeredservices\servicesformembers\performed-service.model.ts" />
     <TypeScriptCompile Include="src\app\offeredservices\servicesformembers\services-for-members.service.ts" />
     <TypeScriptCompile Include="src\app\offeredservices\servicesformembers\services-for-members.component.ts" />
+    <TypeScriptCompile Include="src\app\shared\app-shared.module.ts" />
+    <TypeScriptCompile Include="src\app\shared\auth\auth-activate.guard.ts" />
+    <TypeScriptCompile Include="src\app\shared\auth\auth-event.service.ts" />
+    <TypeScriptCompile Include="src\app\shared\auth\auth.error.ts" />
+    <TypeScriptCompile Include="src\app\shared\auth\http-auth.interceptor.ts" />
+    <TypeScriptCompile Include="src\app\shared\auth\oidc.service.ts" />
+    <TypeScriptCompile Include="src\app\shared\index.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="callback.html" />
     <Content Include="config\gulp\config.js" />
     <Content Include="config\gulp\env.js" />
     <Content Include="config\gulp\local-config.js" />
@@ -233,11 +274,16 @@
     <Content Include="config\gulp\tasks\sass.js" />
     <Content Include="config\gulp\tasks\serve.js" />
     <Content Include="config\gulp\tasks\typescript.js" />
+    <Content Include="EnvironmentSettings\authsettings.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="gulpfile.js" />
+    <Content Include="silentcallback.html" />
     <Content Include="src\app\admin\admin.html" />
     <Content Include="src\app\app.html" />
     <Content Include="src\app\home\home.css" />
     <Content Include="src\app\home\home.html" />
+    <Content Include="src\app\login\login.html" />
     <Content Include="src\app\member\member.html" />
     <Content Include="src\app\offeredservices\servicesformembers\services-for-members.html" />
     <Content Include="src\assets\fonts\roboto-v15-latin-300.svg" />
